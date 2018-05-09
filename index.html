@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<title>Sketch Go</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name='apple-mobile-web-app-title' content='nowGO'>
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<link rel- 'apple-touch-icon' href='images/icon-ios.png'>
+<link rel="stylesheet" href="styles.css">
+<script src="touchcanvas.js" defer></script>
+<script src="sketch.js" defer></script>
+<script src="geolocation.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBpgYDhNb9tOHEV85ge59wPwYPfs4zbM_8",
+        authDomain: "nowgo-101.firebaseapp.com",
+        databaseURL: "https://nowgo-101.firebaseio.com",
+        projectId: "nowgo-101",
+        storageBucket: "nowgo-101.appspot.com",
+        messagingSenderId: "835075762440"
+    };
+    firebase.initializeApp(config);
+</script>
+
+<section id="catch">
+    <header>
+        <h1>Catch Sketches around you</h1>
+        <button id="btnPinNew">Pin a new Sketch</button>
+        <p>Walk in your area to find sketches</p>
+    </header>
+    <ul id="sketches">
+    </ul>
+</section>
+
+<section id="pin">
+    <header>
+        <h1>Pin a new Sketch in the World</h1>
+        <button id="btnPinCancel">Cancel</button>
+        <button id="btnPinPost">PIN Sketch at Current Location</button>
+        <p>Draw the sketch on the white area and then pin it in your world</p>
+    </header>
+    <canvas id="c"></canvas>
+</section>
