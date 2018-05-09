@@ -39,7 +39,7 @@ el.addEventListener("touchmove", function(e) {
   var dist = distanceBetween(lastPoint, currentPoint);
   var angle = angleBetween(lastPoint, currentPoint);
   var force = e.touches[0].force;
-  var rectSizeForce = (force + 0.2) * 3;
+  var rectSizeForce = rectSize / (force + 0.2) * 3;
   for (var i = 0; i < dist; i++) {
     var x = lastPoint.x + Math.sin(angle) * i;
     var y = lastPoint.y + Math.cos(angle) * i;
