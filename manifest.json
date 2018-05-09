@@ -3,7 +3,7 @@
   "short_name": "GO",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "palevioletred",
+  "background_color": "green",
   "description": "geolocation app",
   "icons": [
     {
