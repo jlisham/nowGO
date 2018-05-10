@@ -16,6 +16,11 @@
 <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
 <script>
+    if ("standalone" in window.navigator && window.navigator.standalone) { //checks if you're in app mode
+
+        window.location = 'https://jlisham.github.io/nowGO/';  //the URL you want to refer to.
+
+    }
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyBpgYDhNb9tOHEV85ge59wPwYPfs4zbM_8",
